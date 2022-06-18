@@ -6,6 +6,7 @@ Created on Wed Jun 15 15:26:46 2022
 """
 
 import streamlit as st
+from joblib import dump, load
 
 
 #from streamlit.script_run_context import get_script_run_ctx
@@ -54,10 +55,10 @@ with st.sidebar:
     }
     )
 
-image1 = Image.open('\\Users\carol\OneDrive\Bureau\sourire client.jpg')
-image2 = Image.open('\\Users\carol\OneDrive\Bureau\customer satisfaction.jpg')
+image1 = Image.open('sourire client.jpg')
+image2 = Image.open('customer satisfaction.jpg')
 
-
+# \\Users\carol\OneDrive\Bureau\
 
 
 
@@ -151,8 +152,36 @@ elif choose == "Nuage de mots":
     st.markdown('<h2 style="color: black;">Nuage de mots</h2>', unsafe_allow_html=True)
 
 
+
+
+
+
+
 elif choose == "Modélisation":
     st.markdown('<h2 style="color: black;">Modélisation</h2>', unsafe_allow_html=True)
+
+# Chargement du modèle (à faire sur l'app Streamlit)
+    pipeLR = load('pipeLR.joblib') 
+    pipeDT = load('pipeDT.joblib') 
+    pipeGBC = load('pipeGBC.joblib') 
+
+    pipeLRM = load('pipeLRM.joblib') 
+    pipeDTM = load('pipeDTM.joblib') 
+    pipeGBCM = load('pipeGBCM.joblib') 
+
+    pipeRL = load('pipeRL.joblib') 
+    pipeDTR = load('pipeDTR.joblib') 
+    pipeGBR = load('pipeGBR.joblib') 
+
+    pipeRLm = load('pipeRLm.joblib') 
+    pipeDTRm = load('pipeDTRm.joblib') 
+    pipeGBRm = load('pipeGBRm.joblib') 
+
+
+
+
+
+
 
 
 elif choose == "A vous de jouer !":
@@ -174,14 +203,14 @@ elif choose == "Contact":
 
     title_container0 = st.container()
     col1, col2 = st.columns([1, 5])
-    imagecd = Image.open('\\Users\carol\OneDrive\Images\photo CDU.PNG')
+    imagecd = Image.open('photo CDU.PNG')
     with title_container0:
         with col1:
             st.image(imagecd, width=100)
         with col2:
             st.markdown('<h3 style="color: orange;">Caroline Dumoulin</h3>', unsafe_allow_html=True)
 
-
+#\\Users\carol\OneDrive\Images\
 
     st.markdown('<p class="font">Me contacter </p>', unsafe_allow_html=True)
     
