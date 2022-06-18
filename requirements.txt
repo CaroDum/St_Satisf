@@ -4,6 +4,5 @@ seaborn
 plotly
 streamlit_option_menu
 nltk
-re
 streamlit
 pandas
