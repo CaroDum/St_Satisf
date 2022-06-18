@@ -6,3 +6,4 @@ streamlit_option_menu
 nltk
 streamlit
 pandas
+train_test_split
