@@ -6,6 +6,11 @@ Created on Wed Jun 15 15:26:46 2022
 """
 
 import streamlit as st
+
+
+#from streamlit.script_run_context import get_script_run_ctx
+#install streamlit-option-menu
+
 from streamlit_option_menu import option_menu
 
 from PIL import Image
