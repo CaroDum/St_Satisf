@@ -49,7 +49,7 @@ with st.sidebar:
         "nav-link-selected": {"background-color": "#ff8100"},
     }
     )
-image1 = Image.open("Images/sourire_client.jpg")
+image1 = Image.open('Images/sourire_client.jpg')
 image2 = Image.open('Images/customer_satisfaction.jpg')
 image3 = Image.open('Images/WordCloud_neg.png')
 image4 = Image.open('Images/WordCloud_pos.png')
