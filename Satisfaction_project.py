@@ -915,7 +915,7 @@ elif choose == "A vous de jouer !":
     if txt == "Entrez ici votre commentaire":
         result = 3
     else:
-        #result = pipeLRM.predict(df_test)[0]
+        result = pipeLRM.predict(df_test)[0]
 
     st.write("Prédictions pour :", option)
     if result == 0:
