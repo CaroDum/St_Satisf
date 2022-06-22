@@ -6,5 +6,4 @@ matplotlib
 seaborn
 streamlit_option_menu
 nltk
-langdetec
 joblib
