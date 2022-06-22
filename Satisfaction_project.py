@@ -734,7 +734,7 @@ elif choose == "A vous de jouer !":
 
     
     # mettre une zone de texte pour entrer un commentaire
-    txt = " "
+    
     txt = st.text_area("Entrez votre commentaire, et nous allons voir si le modèle prédit correctement votre sentiment :", value = "Entrez ici votre commentaire")
 
    
@@ -904,8 +904,8 @@ elif choose == "A vous de jouer !":
     elif option == 'Gradient Boosting Regressor':
         mod = pipeGBCM
         
+    st.write(result)    
         
-           
     # donner la prédiction 
     if txt == "Entrez ici votre commentaire":
         result = 3
@@ -919,7 +919,8 @@ elif choose == "A vous de jouer !":
         st.write("--> Client satisfait, la note donnée sera bonne : 4 ou 5      :sunglasses:  ")
     if result == 3:
         pass
- 
+    
+    
 
 #################################################################################    
 elif choose == "Importantes Features":
