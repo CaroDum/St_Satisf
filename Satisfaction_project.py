@@ -161,7 +161,7 @@ elif choose == "Exploration Données":
     st.write('\n ')
     st.write('**Notre jeu de données retravaillé et nettoyé**')
     with st.echo():
-        df = pd.read_csv("\\Users\carol\OneDrive\Bureau\Projet DS\Données/data_satis.csv")
+        df = pd.read_csv("Données/data_satis.csv")
         
         
     csv2 = convert_df(df_base)  
@@ -830,7 +830,7 @@ elif choose == "Modélisation2":
     st.write("___1. Linear Regression sans métadonnées___ ")
     image220 = Image.open("Images/Modelisation/image220.JPG") #reg lin ss m
     image221 = Image.open("Images/Modelisation/image221.JPG") #cm reg lin ss m
-    image227 = Image.open("C:Images/image227.jpg")
+    image227 = Image.open("Images/image227.jpg")
     
     
     title_container = st.container()
