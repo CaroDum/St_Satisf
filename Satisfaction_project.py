@@ -192,14 +192,14 @@ elif choose == "Exploration Données":
 
     
     if st.checkbox('Afficher les graphes relatifs aux valeurs de star :'):
-        image9 = Image.open('Images\graphes_star.PNG')
+        image9 = Image.open('Images/graphes_star.PNG')
         st.image(image9)
         
         st.info('La variable **star**, qui représente la note, est composée de 5 modalités, allant de 1 à 5, 1 représentant la note des clients les plus satisfaits.\n Notons une majorité de notes à 5 (près de 6000 observations), mais suivie par la modalité "1" (la plus basse note) à 5000 observations. \n Notre "ventre mou" est composé des notes moyennes (2 et 3), la note "4" est presque à 4000 observations. \n → on peut en déduire que les notes sont soit bonnes voire très bonnes, soit vraiment très mauvaises, les notes "2" et "3" étant plutôt minoritaires.' )     
         st.write('\n ')
 
     if st.checkbox('Afficher les stats descriptives sur star :'):
-        image10 = Image.open("Images\stats_star.JPG")
+        image10 = Image.open("Images/stats_star.JPG")
         st.image(image10)
         st.info('Le calcul de la moyenne nous confirme une note plutôt élevée à 3.23 / 5.  \n  Et nous constatons que plus 50% des observations ont une note de 4 ou 5 → ce qui correspond à des clients plutôt contents !')
 
@@ -211,7 +211,7 @@ elif choose == "Exploration Données":
     st.write('Comment est composée la variable **company**, qui représente la ou les enseignes concernées par les avis')
     st.write('\n ')  
     if st.checkbox("Afficher l'analyse sur la variable compagny :"):
-        image11 = Image.open("Images\graphes_company.png")
+        image11 = Image.open("Images/graphes_company.png")
         st.image(image11)
         st.info("Nous n'avons que 2 marques dans le fichier : Veepee et ShowRoomPrivé : 2 spécialistes de la vente événementielle en ligne.  \n   Pour rappel, il s’agit de ventes éphémères sur des produits de grandes marques, avec des réductions importantes pour le client.  \n  Nous pouvons donc comparer ces 2 acteurs, qui œuvrent dans le même domaine : vente en ligne, aucun magasin, envoi par la poste ou relais.  \n  Notons que VeePee est sous-représenté par rapport à ShowRoomPrivé avec moins de 3.000 observations pour plus de 14.000 pour ShowRoomPrivé. (non significatif pour la suite car nous allons modéliser le fichier dans son ensemble)")  
     st.write('\n ')  
@@ -223,7 +223,7 @@ elif choose == "Exploration Données":
     st.write("Comment est composée la variable **Source**, qui représente le ou les sites d'avis déposés par les clients")
     st.write('\n ')  
     if st.checkbox("Afficher l'analyse sur la variable source :"):
-        image12 = Image.open("Images\graphes_source.png")
+        image12 = Image.open("Images/graphes_source.png")
         st.image(image12)
         st.info("Notre base de données est constituée d'avis clients provenant de 2 sites :\n - TrustedShop \n - TrustPilot \n Notons la différence entre les 2 sites d'avis : Trusted shop : les avis clients sont vérifiés, ils font suite à une commande client et pour TrustPilot : ce sont des avis d'internautes, et donc pas forcément vérifiés.")     
     st.write('\n ')  
@@ -235,7 +235,7 @@ elif choose == "Exploration Données":
     st.write("Quelle est la répartition de la **source** par rapport à l'enseigne ?")
     st.write('\n ')  
     if st.checkbox("Afficher l'analyse :", key =1):
-        image13 = Image.open('Images\sourcerepart.JPG')
+        image13 = Image.open('Images/sourcerepart.JPG')
         st.image(image13)
         st.info("Aucun commentaire pour VeePee sur le site TrustedShop : ces commentaires proviennent exclusivement du site TrustPilot.  \n  Les commentaires pour ShowRoomPrivé SRP proviennent en grande majorité du site TrustedShop **(83%)** ")     
     st.write('\n ')  
@@ -247,7 +247,7 @@ elif choose == "Exploration Données":
     st.write('Quelle est la répartition de la variable **star** par rapport à nos 2 enseignes ?')
     st.write('\n ')  
     if st.checkbox("Afficher l'analyse :", key =2):
-        image15 = Image.open("Images\proportion_note_enseigne.png")
+        image15 = Image.open("Images/proportion_note_enseigne.png")
         st.image(image15)
         st.info("Énorme différence de notation entre les 2 marques ! Veepee n'a quasiment que des notes = 1, tandis que la distribution pour ShowRoomPrivé suit la distribution générale vu tout à l'heure (logique au vu du nombre d’observations liées à ShowRoom également !)")  
     st.write('\n ')  
@@ -255,7 +255,7 @@ elif choose == "Exploration Données":
     st.write('Quelles sont les stats de la variable **star** par rapport à nos 2 enseignes ?')
     st.write('\n ')  
     if st.checkbox("Afficher l'analyse :", key =3):
-        image16 = Image.open("Images\star_parenseigne.JPG")
+        image16 = Image.open("Images/star_parenseigne.JPG")
         st.image(image16)
         st.info("Confirmation de ce que le graphique précédent nous indiquait : la moyenne pour VeePee est à **1.46 / 5** pour 3.000 observations, vs **3.61/ 5** pour près de 14.000 observations pour ShowRoomPrivé.  \n  --> Les clients VeePee sont clairement beaucoup plus insatisfaits que ceux de ShowRoom !")
     st.write('\n ')  
@@ -266,7 +266,7 @@ elif choose == "Exploration Données":
     st.write('Quelle enseigne répond le plus au client ?')
     st.write('\n ')  
     if st.checkbox("Afficher l'analyse sur la réponse apportée:"):
-        image17 = Image.open("Images\image17.png")
+        image17 = Image.open("Images/image17.png")
         st.image(image17)
         st.success("**Variable très intéressante, car elle permet de voir si un client mécontent reçoit une réponse de la part de son enseigne. Autrement dit, est-ce que le client reçoit une réponse ? quel est le client a qui on répond (mécontent?) ?**")
         st.info("Instructif car nous avons vu précédemment que VeePee avait une majorité de note à 1 --> en tant qu’enseigne, il serait intéressant de répondre à au client et de pouvoir constater ainsi :  \n  d’une part son mécontentement et tenter de le résoudre, d’autre part de voir si un problème récurrent n'apparaît pas dans les commentaires. \n  Or, dans notre fichier, nous constatons que VeePee ne répond jamais aux clients. ShowRoomPrivé le fait dans près d'un cas sur 2. ")  
@@ -276,7 +276,7 @@ elif choose == "Exploration Données":
     st.write('A qui apporte-t-on une réponse ?')
     st.write('\n ')  
     if st.checkbox("Afficher le graphe"):
-        image18 = Image.open("Images\star_et_answer.png")
+        image18 = Image.open("Images/star_et_answer.png")
         st.image(image18)
         st.info("Les réponses ne sont pas apportées en fonction de la note. Ce qui est étonnant car il serait productif de répondre aux clients les plus insatisfaits.  \n  De plus en plus de clients déposent des avis sur une multitude de sites, et malgré toutes les technologies pour rassembler ces avis sur une seule et même plateforme permettant de répondre plus facilement au client, il est extrêmement long et coûteux pour les enseignes de répondre au commentaire, de façon personnalisée pour tous les clients.  \n  → il est judicieux dans ce cas de 'choisir ses combats' et de privilégier dans un 1e temps les clients mécontents pour éviter leur départ et leur non-rachat par la suite")
     st.write('\n ')  
@@ -299,9 +299,9 @@ elif choose == "Exploration MétaDonnées":
     st.markdown('<h6 style="color: black;">La métadonnée LONGUEUR DU COMMENTAIRE</h6>', unsafe_allow_html=True)
     st.write('\n ')  
     if st.checkbox("en général, par enseigne et selon les notes données", key=1):
-        image19 = Image.open("Images\long_com_describe.JPG")
-        image20 = Image.open("Images\long_com_par_ens.JPG")
-        image21 = Image.open("Images\long_com_par_star.JPG")
+        image19 = Image.open("Images/long_com_describe.JPG")
+        image20 = Image.open("Images/long_com_par_ens.JPG")
+        image21 = Image.open("Images/long_com_par_star.JPG")
         
         title_container = st.container()
         col1, col2 = st.columns([1, 1.3])
@@ -327,9 +327,9 @@ elif choose == "Exploration MétaDonnées":
     st.write('\n ')  
 
     if st.checkbox("en général, par enseigne et selon les notes données", key=2):
-        image22 = Image.open("Images\mots_neg_describe.JPG")
-        image23 = Image.open("Images\mots_neg_par_ens.JPG")
-        image24 = Image.open("Images\mots_neg_par_star.JPG")
+        image22 = Image.open("Images/mots_neg_describe.JPG")
+        image23 = Image.open("Images/mots_neg_par_ens.JPG")
+        image24 = Image.open("Images/mots_neg_par_star.JPG")
         
         title_container = st.container()
         col1, col2 = st.columns([1, 1.3])
@@ -350,10 +350,10 @@ elif choose == "Exploration MétaDonnées":
     st.write('\n ') 
     if st.checkbox("en général, par enseigne et selon les notes données", key=3):
         st.write('\n ') 
-        image25 = Image.open("Images\image25.JPG") #nb pts describe
-        image26 = Image.open("Images\image26.JPG") #tc nb_pt / star
-        ptsparstar = Image.open("Images\ptsparstar.JPG") #nb pts par star
-        ptsparens = Image.open("Images\ptspar_ens.JPG") # nb pts par enseigne
+        image25 = Image.open("Images/image25.JPG") #nb pts describe
+        image26 = Image.open("Images/image26.JPG") #tc nb_pt / star
+        ptsparstar = Image.open("Images/ptsparstar.JPG") #nb pts par star
+        ptsparens = Image.open("Images/ptspar_ens.JPG") # nb pts par enseigne
 
         st.image(image25)
         st.image(image26)
@@ -443,7 +443,7 @@ elif choose == "Méthodologie":
     st.write(' La modélisation consiste à appliquer des algorithmes de classification : un client appartient soit à une classe 1 (le client est satisfait) soit à une classe 0 (client non satisfait). ')
     st.write('\n')
     st.write('Le processus de la modélisation se décompose en quatre étapes :')
-    image100 = Image.open("\\Images Streamlit\etapes_modelisa.JPG")
+    image100 = Image.open("Images Streamlit/etapes_modelisa.JPG")
     st.image(image100)
     st.write('\n')
 
@@ -453,7 +453,7 @@ elif choose == "Méthodologie":
     st.markdown('<h5 style="color: black;">Préparation des données</h5>', unsafe_allow_html=True)
     st.write('\n')
     st.write("___1. Nettoyage du fichier :___  \n  But : Enlever les variables inutiles / les valeurs manquantes, afin de ne pas alourdir le fichier et ainsi alléger le temps de traitement. Nous ne gardons que les variables utiles pour la modélisation : ")
-    image101 = Image.open("Images Streamlit\image101.JPG")
+    image101 = Image.open("Images Streamlit/image101.JPG")
     st.image(image101)
     st.write('Et nous éliminons également les lignes où il n’y a pas de commentaires.')
     st.write('\n')
@@ -492,8 +492,8 @@ elif choose == "Modélisation":
     st.write('\n')
     
     st.write("___1. Logistic Regression sans métadonnées___ ")
-    image200 = Image.open("Images\Modelisation\image200.JPG") #reg log ss m
-    image201 = Image.open("Images\Modelisation\image201.JPG") #cm reg log ss m
+    image200 = Image.open("Images/Modelisation/image200.JPG") #reg log ss m
+    image201 = Image.open("Images/Modelisation/image201.JPG") #cm reg log ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 1):
         st.image(image200)
@@ -504,8 +504,8 @@ elif choose == "Modélisation":
 
 
     st.write("___2. Decision Tree Classifier sans métadonnées___ ")
-    image202 = Image.open("Images\Modelisation\image202.JPG") #DTC ss m
-    image203 = Image.open("Images\Modelisation\image203.JPG") #cm DTC ss m
+    image202 = Image.open("Images/Modelisation/image202.JPG") #DTC ss m
+    image203 = Image.open("Images/Modelisation/image203.JPG") #cm DTC ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 2):
         st.image(image202)
@@ -516,8 +516,8 @@ elif choose == "Modélisation":
    
     
     st.write("___3. Gradient Boosting Classifier sans métadonnées___ ")
-    image204 = Image.open("Images\Modelisation\image204.JPG") #GBC ss m
-    image205 = Image.open("Images\Modelisation\image205.JPG") #cm GBC ss m
+    image204 = Image.open("Images/Modelisation/image204.JPG") #GBC ss m
+    image205 = Image.open("Images/Modelisation/image205.JPG") #cm GBC ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 3):
         st.image(image204)
@@ -528,7 +528,7 @@ elif choose == "Modélisation":
     
     
     if st.checkbox('Afficher tableau récap + commentaires sur ces 3 modèles :', key = 1):
-        image206 = Image.open("Images\Modelisation\image206.JPG")  # resum_class_ssm
+        image206 = Image.open("Images/Modelisation/image206.JPG")  # resum_class_ssm
         st.image(image206)
         st.info('Nous avons déjà de très bons résultats à partir de ces 3 modèles qui en plus n’utilisent pas les métadonnées créées.  \n  Le meilleur est le Reg Log, suivi par le Gradient Boosting.  \n  Le modèle Decision Tree est le moins performant.')
 
@@ -541,8 +541,8 @@ elif choose == "Modélisation":
     st.write('\n')
     
     st.write("___1. Logistic Regression avec métadonnées___ ")
-    image210 = Image.open("Images\Modelisation\image210.JPG") #reg log av m
-    image211 = Image.open("Images\Modelisation\image211.JPG") #cm reg log av m
+    image210 = Image.open("Images/Modelisation/image210.JPG") #reg log av m
+    image211 = Image.open("Images/Modelisation/image211.JPG") #cm reg log av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 4):
         st.image(image210)
@@ -553,8 +553,8 @@ elif choose == "Modélisation":
 
 
     st.write("___2. Decision Tree Classifier avec métadonnées___ ")
-    image212 = Image.open("Images\Modelisation\image212.JPG") #DTC av m
-    image213 = Image.open("Images\Modelisation\image213.JPG") #cm DTC av m
+    image212 = Image.open("Images/Modelisation/image212.JPG") #DTC av m
+    image213 = Image.open("Images/Modelisation/image213.JPG") #cm DTC av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 5):
         st.image(image212)
@@ -565,8 +565,8 @@ elif choose == "Modélisation":
    
     
     st.write("___3. Gradient Boosting Classifier sans métadonnées___ ")
-    image214 = Image.open("Images\Modelisation\image214.JPG") #GBC av m
-    image215 = Image.open("Images\Modelisation\image215.JPG") #cm GBC av m
+    image214 = Image.open("Images/Modelisation/image214.JPG") #GBC av m
+    image215 = Image.open("Images/Modelisation/image215.JPG") #cm GBC av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 6):
         st.image(image214)
@@ -577,7 +577,7 @@ elif choose == "Modélisation":
     
     
     if st.checkbox('Afficher tableau récap + commentaires sur ces 3 modèles :', key = 2):
-        image216 = Image.open("Images\Modelisation\image216.JPG")  # resum_class_avm
+        image216 = Image.open("Image/Modelisation/image216.JPG")  # resum_class_avm
         st.image(image216)
         st.info('Le seul modèle qui s’améliore avec les métadonnées est le Gradient Boosting. Le Log Reg reste très haut, mais avec un F1 Score et un score d’accuracy en très légère baisse.')
 
@@ -590,9 +590,9 @@ elif choose == "Modélisation":
     st.write('\n')
     
     st.write("___1. Linear Regression sans métadonnées___ ")
-    image220 = Image.open("Images\Modelisation\image220.JPG") #reg lin ss m
-    image221 = Image.open("Images\Modelisation\image221.JPG") #cm reg lin ss m
-    image227 = Image.open("Images\image227.jpg")
+    image220 = Image.open("Images/Modelisation/image220.JPG") #reg lin ss m
+    image221 = Image.open("Images/Modelisation/image221.JPG") #cm reg lin ss m
+    image227 = Image.open("Images/image227.jpg")
     
     
     title_container = st.container()
@@ -616,8 +616,8 @@ elif choose == "Modélisation":
 
 
     st.write("___2. Decision Tree Classifier sans métadonnées___ ")
-    image222 = Image.open("Images\Modelisation\image222.JPG") #DTR ss m
-    image223 = Image.open("Images\Modelisation\image223.JPG") #cm DTR ss m
+    image222 = Image.open("Images/Modelisation/image222.JPG") #DTR ss m
+    image223 = Image.open("Images/Modelisation/image223.JPG") #cm DTR ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 8):
         st.image(image222)
@@ -628,8 +628,8 @@ elif choose == "Modélisation":
    
     
     st.write("___3. Gradient Boosting Regressor sans métadonnées___ ")
-    image224 = Image.open("Images\Modelisation\image224.JPG") #GBR ss m
-    image225 = Image.open("Images\Modelisation\image225.JPG") #cm GBR ss m
+    image224 = Image.open("Images/Modelisation/image224.JPG") #GBR ss m
+    image225 = Image.open("Images/Modelisation/image225.JPG") #cm GBR ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 9):
         st.image(image204)
@@ -640,7 +640,7 @@ elif choose == "Modélisation":
     
     
     if st.checkbox('Afficher tableau récap + commentaires sur ces 3 modèles :', key = 3):
-        image226 = Image.open("Images\Modelisation\image226.JPG")  # resum_class_ssm
+        image226 = Image.open("Images/Modelisation/image226.JPG")  # resum_class_ssm
         st.image(image226)
         st.info('Nous notons des scores très faibles par rapport à ce qu’on a pu obtenir sur la classification. Le meilleur modèle ici est le **Decision Tree** , mais avec une Accuracy à seulement **0.56 !**  \n   Le Lin Reg a un score très moyen : on remarque qu’il classe assez bien les notes extrêmes : **le 1 à 64%** et **le 5 à 70%**, mais le reste n’est pas reconnu. (mais peut- être est-ce dû à notre “reclassement” ?)  \n  Pour le GradientBoostingReg, le comportement pour le classement du 1 est similaire au hasard, et pour le reste c’est encore moins bon : on pourrait presque en déduire que si ce modèle prédit un 2, alors c’est tout sauf un 2 qui va sortir !')
 
@@ -656,8 +656,8 @@ elif choose == "Modélisation":
 
     st.write("___1. Linear Regression avec métadonnées___ ")
     
-    image230 = Image.open("Images\Modelisation\image230.JPG") #reg lin av m
-    image231 = Image.open("Images\Modelisation\image231.JPG") #cm reg lin av m
+    image230 = Image.open("Images/Modelisation/image230.JPG") #reg lin av m
+    image231 = Image.open("Images/Modelisation/image231.JPG") #cm reg lin av m
 
     title_container = st.container()
     col1, col2 = st.columns([1, 10])
@@ -678,8 +678,8 @@ elif choose == "Modélisation":
 
 
     st.write("___2. Decision Tree Regressor avec métadonnées___ ")
-    image232 = Image.open("Images\Modelisation\image232.JPG") #DTR av m
-    image233 = Image.open("Images\Modelisation\image233.JPG") #cm DTR av m
+    image232 = Image.open("Images/Modelisation/image232.JPG") #DTR av m
+    image233 = Image.open("Images/Modelisation/image233.JPG") #cm DTR av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 11):
         st.image(image232)
@@ -690,8 +690,8 @@ elif choose == "Modélisation":
    
     
     st.write("___3. Gradient Boosting Regressor sans métadonnées___ ")
-    image234 = Image.open("Images\Modelisation\image234.JPG") #GBR av m
-    image235 = Image.open("Images\Modelisation\image235.JPG") #cm GBR av m
+    image234 = Image.open("Images/Modelisation/image234.JPG") #GBR av m
+    image235 = Image.open("Images/Modelisation/image235.JPG") #cm GBR av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 12):
         st.image(image234)
@@ -702,20 +702,11 @@ elif choose == "Modélisation":
     
     
     if st.checkbox('Afficher tableau récap + commentaires sur ces 3 modèles :', key = 4):
-        image236 = Image.open("Images\Modelisation\image236.JPG")  # resum_class_avm
+        image236 = Image.open("Images/Modelisation/image236.JPG")  # resum_class_avm
         st.image(image236)
         st.info('Aucune amélioration pour le Lin Reg.  \n  Le Gradient Boosting s’améliore très (trop) légèrement avec l’ajout des métadonnées.  \  Pas d’amélioration ni détérioration pour le Decision Tree Regressor.  \n  En résumé : les modèles ne sont pas meilleurs avec les métadonnés')
 
     
-
-
-
-    # les tableaux de résultats pour chaque modèle et analyse
-    # résumé et conclusion 
-
-
-
-
 
 
 
@@ -725,21 +716,21 @@ elif choose == "A vous de jouer !":
 
 
 # Chargement du modèle (à faire sur l'app Streamlit)
-    pipeLR = load("Modeles\pipeLR.joblib") 
-    pipeDT = load('Modeles\pipeDT.joblib') 
-    pipeGBC = load('Modeles\pipeGBC.joblib') 
+    pipeLR = load("Modeles/pipeLR.joblib") 
+    pipeDT = load('Modeles/pipeDT.joblib') 
+    pipeGBC = load('Modeles/pipeGBC.joblib') 
 
-    pipeLRM = load('Modeles\pipeLRM.joblib') 
-    pipeDTM = load('Modeles\pipeDTM.joblib') 
-    pipeGBCM = load('Modeles\pipeGBCM.joblib') 
+    pipeLRM = load('Modeles/pipeLRM.joblib') 
+    pipeDTM = load('Modeles/pipeDTM.joblib') 
+    pipeGBCM = load('Modeles/pipeGBCM.joblib') 
 
-    pipeRL = load('Modeles\pipeRL.joblib') 
-    pipeDTR = load('Modeles\pipeDTR.joblib') 
-    pipeGBR = load('Modeles\pipeGBR.joblib') 
+    pipeRL = load('Modeles/pipeRL.joblib') 
+    pipeDTR = load('Modeles/pipeDTR.joblib') 
+    pipeGBR = load('Modeles/pipeGBR.joblib') 
 
-    pipeRLm = load('Modeles\pipeRLm.joblib') 
-    pipeDTRm = load('Modeles\pipeDTRm.joblib') 
-    pipeGBRm = load('Modeles\pipeGBRm.joblib') 
+    pipeRLm = load('Modeles/pipeRLm.joblib') 
+    pipeDTRm = load('Modeles/pipeDTRm.joblib') 
+    pipeGBRm = load('Modeles/pipeGBRm.joblib') 
 
 
     
@@ -925,15 +916,15 @@ elif choose == "Importantes Features":
     st.write('\n ')   
     st.write('Après des essais de visualisation sur le Bag of Word, nous voudrions voir quels sont les mots qui contribuent le plus à la construction du modèle. Nous prenons l’un des modèles qui a le plus performé : le Logistic Regression avec métadonnées.')
     if st.checkbox('Afficher Top 40 Features pour le modèle Reg Log avec métadonnées'):
-        image260 = Image.open("Images\image260.JPG")
+        image260 = Image.open("Images/image260.JPG")
         st.image(image260) 
         st.write('\n')
         st.info("Les mots les plus contributeurs en positif sont les mots **“satisfait”**, **“parfait”** et **“rapide”**.  \n  Les mots les plus contributeurs côté négatif sont **”mois”**, **“arnaque”**, et **“mauvaise”**.  \n  Le mot “mois” est étonnant... Mais quand on lit quelques commentaires, on s'aperçoit que certains clients ont attendu très longtemps leur colis")
         st.write('\n')
 
     if st.checkbox('Afficher Importantes Features pour le modèle Gradient Boosting avec métadonnées'):
-        image261 = Image.open("Images\image261.JPG")
-        image262 = Image.open("Images\image262.JPG")
+        image261 = Image.open("Images/image261.JPG")
+        image262 = Image.open("Images/image262.JPG")
 
         title_container = st.container()
         col1, col2 = st.columns([1, 1.2])
@@ -964,8 +955,8 @@ elif choose == "Conclusion":
 
     if st.checkbox('Prédictions sur un fichier "neuf" :'):
         st.write('Nous avons mis en place une “mini-base” de commentaires fictifs, et avons tenté une prédiction par quelques-uns des modèles vus plus haut. ')
-        image250 = Image.open("Images\image250.JPG")
-        image251 = Image.open("Images\image251.JPG")
+        image250 = Image.open("Images/image250.JPG")
+        image251 = Image.open("Images/image251.JPG")
         st.write('\n ')
         st.image(image250, width = 950) 
         st.image(image251, width = 450) 
@@ -1011,7 +1002,7 @@ elif choose == "Contact":
     
     title_container0 = st.container()
     col1, col2 = st.columns([1, 5])
-    imagecd = Image.open("Images\photo_CDU.PNG")
+    imagecd = Image.open("Images/photo_CDU.PNG")
     with title_container0:
         with col1:
             st.image(imagecd, width=100)
