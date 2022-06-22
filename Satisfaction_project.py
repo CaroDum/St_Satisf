@@ -908,9 +908,7 @@ elif choose == "A vous de jouer !":
     #st.write(pipeLRM.predict(toutpropre(txt)))  # il plante ici
     #st.write(pipeLRM.feature_names_in_) 
     
-    
-    df_test2 = pd.Series(df_test)
-    
+        
     # donner la prédiction 
     if txt == "Entrez ici votre commentaire":
         result = 3
