@@ -909,7 +909,7 @@ elif choose == "A vous de jouer !":
     #st.write(pipeLRM.feature_names_in_) # msg erreur : pipelin has no features_names
     # result = pipeLRM.predict(df_test) #ne renvoie rien
 
-    st.write(pipeLRM.named_steps['preprocessor']).transformers_[0]
+    st.write(pipeLRM.named_steps['preprocessor']).transformers_
     #st.write(pipeLRM.named_steps['preprocessor'].transformers_[0][1].named_steps['vectorizer'].get_feature_names())
 
     # donner la prédiction 
