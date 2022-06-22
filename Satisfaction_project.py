@@ -910,7 +910,7 @@ elif choose == "A vous de jouer !":
     # st.write(pipeLRM.predict(toutpropre(txt)))  # il plante ici
     
     
-    st.write(pipeLRM_feature_names_in)
+    st.write(pipeLRM_feature_names_in_)
     
     
     # donner la prédiction 
