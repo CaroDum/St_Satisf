@@ -902,9 +902,13 @@ elif choose == "A vous de jouer !":
     elif option == 'Gradient Boosting Regressor':
         mod = pipeGBCM
         
-    st.write(txt)
-    st.write(toutpropre(txt)) 
-        
+    #st.write(txt)
+    #st.write(toutpropre(txt)) 
+    st.write(load("Modeles/pipeLRM.joblib").predict(toutpropre(txt)))  
+    
+    #pipeLRM = load("Modeles/pipeLRM.joblib") 
+    
+    
     # donner la prédiction 
     if txt == "Entrez ici votre commentaire":
         result = 3
