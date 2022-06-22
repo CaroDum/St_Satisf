@@ -8,4 +8,5 @@ streamlit_option_menu
 nltk
 joblib
 unidecode
-pickle
+pickle5
+pickle-mixin
