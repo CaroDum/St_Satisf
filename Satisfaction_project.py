@@ -902,10 +902,14 @@ elif choose == "A vous de jouer !":
         
         
     # donner la prédiction 
-        
+    result = mod.predict(toutpropre(txt))[0]
+
     st.write("Prédictions pour :", option)
     if txt != " ":
-        st.write("OK1", mod.predict(toutpropre(txt)))
+        if result ==0:
+            st.write("--> Client mécontent : la note donnée mauvaise : 1, 2 ou 3     :disappointed:")
+        if result ==1:
+            st.write("--> Client satisfait, la note donnée sera bonne : 4 ou 5      :sunglasses:  ")
 
 
 #################################################################################    
