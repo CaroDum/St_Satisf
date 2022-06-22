@@ -875,8 +875,8 @@ elif choose == "A vous de jouer !":
 
       # 3e partie : on va créer un DF avec ces métadonnées et le commentaire nettoyé :
  
-      df_x = pd.DataFrame(list(zip([x_OK],[long_com],[neg],[interr], [exclam], [points] , [mot_maj],[nb_maj])), 
-                      columns = ['com_OK', 'long_com','mots_neg', 'trouve_int', 'trouve_exc', 'nb_pt', 'mot_maj', 'nb_maj'])
+      df_x = pd.DataFrame(list(zip([long_com],[neg],[interr], [exclam], [points] , [mot_maj],[nb_maj],[x_OK])), 
+                      columns = ['long_com','mots_neg', 'trouve_int', 'trouve_exc', 'nb_pt', 'mot_maj', 'nb_maj','com_OK'])
       return df_x
   
     
