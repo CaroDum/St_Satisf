@@ -26,9 +26,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier 
 from sklearn.metrics import accuracy_score 
 from sklearn.metrics import classification_report  
-#install langdetect
 from nltk.stem.snowball import FrenchStemmer  
-from langdetect import detect
 from  nltk.tokenize import word_tokenize 
 import nltk
 nltk.download('punkt')
