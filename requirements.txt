@@ -10,4 +10,3 @@ joblib
 unidecode
 pickle5
 pickle-mixin
-sklearn.linear_model._logistic
