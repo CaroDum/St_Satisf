@@ -6,3 +6,4 @@ nltk
 streamlit
 pandas
 sklearn
+langdetec
