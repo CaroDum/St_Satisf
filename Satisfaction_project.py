@@ -906,18 +906,18 @@ elif choose == "A vous de jouer !":
     #st.write(toutpropre(txt)) # il le fait
     # st.write(pipeLRM)  # il le fait
     #st.write("df_test", df_test)    # il le fait
-    
     # st.write(pipeLRM.predict(toutpropre(txt)))  # il plante ici
+    #st.write(pipeLRM_feature_names_in_)  # ne fonctionne pas 
     
     
-    st.write(pipeLRM_feature_names_in_)
-    
+    df = pd.DataFrame(boston.data,columns=boston.feature_names)
+    df_test2 = pd.Series(df_test)
     
     # donner la prédiction 
     if txt == "Entrez ici votre commentaire":
         result = 3
     else:
-        result = mod.predict(toutpropre(txt))[0]
+        result = mod.predict(df_test))[0]
 
     st.write("Prédictions pour :", option)
     if result == 0:
