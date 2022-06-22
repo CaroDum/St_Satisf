@@ -50,12 +50,12 @@ with st.sidebar:
     }
     )
 
-image1 = Image.open('Images Streamlit\sourire_client.jpg')
-image2 = Image.open('Images Streamlit\customer_satisfaction.jpg')
-image3 = Image.open('Images Streamlit\WordCloud_neg.png')
-image4 = Image.open('Images Streamlit\WordCloud_pos.png')
-image5 = Image.open('Images Streamlit\métadonnées.PNG')
-image6 = Image.open('Images Streamlit\df_info.PNG')
+image1 = Image.open('Images Streamlit/sourire_client.jpg')
+image2 = Image.open('Images Streamlit/customer_satisfaction.jpg')
+image3 = Image.open('Images Streamlit/WordCloud_neg.png')
+image4 = Image.open('Images Streamlit/WordCloud_pos.png')
+image5 = Image.open('Images Streamlit/métadonnées.PNG')
+image6 = Image.open('Images Streamlit/df_info.PNG')
 
 
 df = pd.read_csv('Données\data_satis.csv')
