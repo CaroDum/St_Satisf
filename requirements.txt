@@ -8,4 +8,3 @@ streamlit_option_menu
 nltk
 joblib
 unidecode
-python===3.9
