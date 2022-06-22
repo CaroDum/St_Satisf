@@ -875,7 +875,7 @@ elif choose == "A vous de jouer !":
 
       # 3e partie : on va créer un DF avec ces métadonnées et le commentaire nettoyé :
  
-      df_x = pd.DataFrame(list(zip([x_OK], [long_com],[neg],[interr], [exclam], [points] , [mot_maj],[nb_maj], )), 
+      df_x = pd.DataFrame(list(zip([x_OK],[long_com],[neg],[interr], [exclam], [points] , [mot_maj],[nb_maj])), 
                       columns = ['com_OK', 'long_com','mots_neg', 'trouve_int', 'trouve_exc', 'nb_pt', 'mot_maj', 'nb_maj'])
       return df_x
   
@@ -909,7 +909,7 @@ elif choose == "A vous de jouer !":
     #st.write(pipeLRM.feature_names_in_) # msg erreur : pipelin has no features_names
     # result = pipeLRM.predict(df_test) #ne renvoie rien
 
-    st.write(pipeLRM.named_steps['preprocessor'].transformers_[0][1].named_steps['vectorizer'].get_feature_names())
+    #st.write(pipeLRM.named_steps['preprocessor'].transformers_[0][1].named_steps['vectorizer'].get_feature_names())
 
     # donner la prédiction 
     if txt == "Entrez ici votre commentaire":
