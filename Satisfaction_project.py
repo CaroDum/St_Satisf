@@ -147,7 +147,7 @@ elif choose == "Exploration Données":
     if st.checkbox('Afficher les infos du jeu de données de base :'):
             st.image(image6)
             st.write('Notre base de données est composée de peu de variables : 11 au total.')
-            image7 = Image.open('Images/descrip_variables_base.PNG')
+            image7 = Image.open('Images/descripvariables_base.PNG')
             st.image(image7)
             st.write("Nous remarquons avec les infos ci-dessus que nous avons énormément de valeurs manquantes pour les variables : reponse / ville /maj / date_commande / ecart.")
             st.write("Nous pouvons déjà supposer que toutes ne seront pas utiles pour l’analyse et la modélisation : en effet, notre objectif est de prédire la note à l’aide du commentaire : nous pouvons donc exclure la variable réponse par exemple qui a été ajoutée après l’obtention de la note (puisque réponse au commentaire")
