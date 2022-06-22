@@ -904,7 +904,7 @@ elif choose == "A vous de jouer !":
         
     #st.write(txt)
     #st.write(toutpropre(txt)) 
-    st.write(load("Modeles/pipeLRM.joblib").predict(toutpropre(txt)))  
+    st.write(pipeLRM)  
     
     #pipeLRM = load("Modeles/pipeLRM.joblib") 
     
