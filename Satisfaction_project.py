@@ -57,9 +57,9 @@ image5 = Image.open('Images/métadonnées.PNG')
 image6 = Image.open('Images/df_info.PNG')
 
 
-df = pd.read_csv('Données\data_satis.csv')
-occurences = pd.read_csv('Données\occurences.csv', names = ['mot','occurence'])
-data_test =  pd.read_csv('Données\data_test.csv')
+df = pd.read_csv('Données/data_satis.csv')
+occurences = pd.read_csv('Données/occurences.csv', names = ['mot','occurence'])
+data_test =  pd.read_csv('Données/data_test.csv')
 
 
 
@@ -147,7 +147,7 @@ elif choose == "Exploration Données":
     if st.checkbox('Afficher les infos du jeu de données de base :'):
             st.image(image6)
             st.write('Notre base de données est composée de peu de variables : 11 au total.')
-            image7 = Image.open('Images\descrip_variables_base.PNG')
+            image7 = Image.open('Images/descrip_variables_base.PNG')
             st.image(image7)
             st.write("Nous remarquons avec les infos ci-dessus que nous avons énormément de valeurs manquantes pour les variables : reponse / ville /maj / date_commande / ecart.")
             st.write("Nous pouvons déjà supposer que toutes ne seront pas utiles pour l’analyse et la modélisation : en effet, notre objectif est de prédire la note à l’aide du commentaire : nous pouvons donc exclure la variable réponse par exemple qui a été ajoutée après l’obtention de la note (puisque réponse au commentaire")
@@ -157,7 +157,7 @@ elif choose == "Exploration Données":
     st.write('\n ')
     st.write('**Notre jeu de données retravaillé et nettoyé**')
     with st.echo():
-        df = pd.read_csv("\\Données\data_satis.csv")
+        df = pd.read_csv("Données/data_satis.csv")
         
         
     csv2 = convert_df(df_base)  
