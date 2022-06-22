@@ -904,7 +904,8 @@ elif choose == "A vous de jouer !":
     elif option == 'Gradient Boosting Regressor':
         mod = pipeGBCM
         
-    st.write(result)    
+    st.write(txt)
+    st.write(toutpropre(txt)) 
         
     # donner la prédiction 
     if txt == "Entrez ici votre commentaire":
