@@ -910,7 +910,6 @@ elif choose == "A vous de jouer !":
     #st.write(pipeLRM_feature_names_in_)  # ne fonctionne pas 
     
     
-    df = pd.DataFrame(boston.data,columns=boston.feature_names)
     df_test2 = pd.Series(df_test)
     
     # donner la prédiction 
