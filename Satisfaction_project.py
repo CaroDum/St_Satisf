@@ -50,8 +50,8 @@ with st.sidebar:
     }
     )
 
-image1 = Image.open('Images Streamlit\sourire client.jpg')
-image2 = Image.open('Images Streamlit\customer satisfaction.jpg')
+image1 = Image.open('Images Streamlit\sourire_client.jpg')
+image2 = Image.open('Images Streamlit\customer_satisfaction.jpg')
 image3 = Image.open('Images Streamlit\WordCloud_neg.png')
 image4 = Image.open('Images Streamlit\WordCloud_pos.png')
 image5 = Image.open('Images Streamlit\métadonnées.PNG')
@@ -148,7 +148,7 @@ elif choose == "Exploration Données":
     if st.checkbox('Afficher les infos du jeu de données de base :'):
             st.image(image6)
             st.write('Notre base de données est composée de peu de variables : 11 au total.')
-            image7 = Image.open('\\Projet DS\Images Streamlit\descrip variables base.PNG')
+            image7 = Image.open('\\Projet DS\Images Streamlit\descrip_variables_base.PNG')
             st.image(image7)
             st.write("Nous remarquons avec les infos ci-dessus que nous avons énormément de valeurs manquantes pour les variables : reponse / ville /maj / date_commande / ecart.")
             st.write("Nous pouvons déjà supposer que toutes ne seront pas utiles pour l’analyse et la modélisation : en effet, notre objectif est de prédire la note à l’aide du commentaire : nous pouvons donc exclure la variable réponse par exemple qui a été ajoutée après l’obtention de la note (puisque réponse au commentaire")
@@ -1012,7 +1012,7 @@ elif choose == "Contact":
     
     title_container0 = st.container()
     col1, col2 = st.columns([1, 5])
-    imagecd = Image.open("Images Streamlit\photo CDU.PNG")
+    imagecd = Image.open("Images Streamlit\photo_CDU.PNG")
     with title_container0:
         with col1:
             st.image(imagecd, width=100)
