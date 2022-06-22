@@ -880,8 +880,6 @@ elif choose == "A vous de jouer !":
       return df_x
   
     
-  ## attention si le comm n'est pas rempli et le prob s'execute --> erreur sur parole
-    #df_new = toutpropre(txt)
     
     
     # faire choisir le modèle pour prédiction
@@ -907,7 +905,7 @@ elif choose == "A vous de jouer !":
     #st.write(txt) # il le fait
     #st.write(toutpropre(txt)) # il le fait
     # st.write(pipeLRM)  # il le fait
-    st.write(df_test)
+    st.write("df_test", df_test)  
     
     #st.write(pipeLRM.predict(toutpropre(txt))
     
