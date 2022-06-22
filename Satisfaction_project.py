@@ -907,7 +907,7 @@ elif choose == "A vous de jouer !":
     # st.write(pipeLRM)  # il le fait
     #st.write("df_test", df_test)    # il le fait
     
-    st.write(pipeLRM.predict(toutpropre(txt))
+    st.write(pipeLRM.predict(toutpropre(txt)))
     
     #pipeLRM = load("Modeles/pipeLRM.joblib") 
     
