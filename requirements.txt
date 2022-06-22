@@ -2,7 +2,6 @@ streamlit
 pandas==1.0.5
 numpy==1.18.1
 scikit_learn==0.21.2
-sklearn.linear_model._logistic
 matplotlib
 seaborn
 streamlit_option_menu
