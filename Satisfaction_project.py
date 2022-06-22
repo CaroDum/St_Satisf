@@ -192,7 +192,7 @@ elif choose == "Exploration Données":
 
     
     if st.checkbox('Afficher les graphes relatifs aux valeurs de star :'):
-        image9 = Image.open("Images/graphes_star.PNG")
+        image9 = Image.open("Images/graphes_star.png")
         st.image(image9)
         
         st.info('La variable **star**, qui représente la note, est composée de 5 modalités, allant de 1 à 5, 1 représentant la note des clients les plus satisfaits.\n Notons une majorité de notes à 5 (près de 6000 observations), mais suivie par la modalité "1" (la plus basse note) à 5000 observations. \n Notre "ventre mou" est composé des notes moyennes (2 et 3), la note "4" est presque à 4000 observations. \n → on peut en déduire que les notes sont soit bonnes voire très bonnes, soit vraiment très mauvaises, les notes "2" et "3" étant plutôt minoritaires.' )     
