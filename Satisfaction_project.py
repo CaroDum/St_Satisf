@@ -883,8 +883,6 @@ elif choose == "A vous de jouer !":
   ## attention si le comm n'est pas rempli et le prob s'execute --> erreur sur parole
     #df_new = toutpropre(txt)
     
-    # mettre une zone de texte pour entrer un commentaire
-    txt = st.text_area("Entrez votre commentaire, et nous allons voir si le modèle prédit correctement votre sentiment :", value = " ")
     
     # faire choisir le modèle pour prédiction
     option = st.selectbox(
