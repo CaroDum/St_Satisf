@@ -443,7 +443,7 @@ elif choose == "Méthodologie":
     st.write(' La modélisation consiste à appliquer des algorithmes de classification : un client appartient soit à une classe 1 (le client est satisfait) soit à une classe 0 (client non satisfait). ')
     st.write('\n')
     st.write('Le processus de la modélisation se décompose en quatre étapes :')
-    image100 = Image.open("Images Streamlit/etapes_modelisa.JPG")
+    image100 = Image.open("Images/etapes_modelisa.JPG")
     st.image(image100)
     st.write('\n')
 
@@ -453,7 +453,7 @@ elif choose == "Méthodologie":
     st.markdown('<h5 style="color: black;">Préparation des données</h5>', unsafe_allow_html=True)
     st.write('\n')
     st.write("___1. Nettoyage du fichier :___  \n  But : Enlever les variables inutiles / les valeurs manquantes, afin de ne pas alourdir le fichier et ainsi alléger le temps de traitement. Nous ne gardons que les variables utiles pour la modélisation : ")
-    image101 = Image.open("Images Streamlit/image101.JPG")
+    image101 = Image.open("Images/image101.JPG")
     st.image(image101)
     st.write('Et nous éliminons également les lignes où il n’y a pas de commentaires.')
     st.write('\n')
