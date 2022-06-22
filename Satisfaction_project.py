@@ -732,8 +732,12 @@ elif choose == "A vous de jouer !":
     pipeDTRm = load('Modeles/pipeDTRm.joblib') 
     pipeGBRm = load('Modeles/pipeGBRm.joblib') 
 
-
     
+    # mettre une zone de texte pour entrer un commentaire
+    txt = " "
+    txt = st.text_area("Entrez votre commentaire, et nous allons voir si le modèle prédit correctement votre sentiment :", value = "Entrez ici votre commentaire")
+
+   
     
     # faire passer à la fonction TOUTPROPRE ce comm
     stemmer = FrenchStemmer()  
@@ -901,16 +905,21 @@ elif choose == "A vous de jouer !":
         mod = pipeGBCM
         
         
+           
     # donner la prédiction 
-    result = mod.predict(toutpropre(txt))[0]
+    if txt == "Entrez ici votre commentaire":
+        result = 3
+    else:
+        result = mod.predict(toutpropre(txt))[0]
 
     st.write("Prédictions pour :", option)
-    if txt != " ":
-        if result ==0:
-            st.write("--> Client mécontent : la note donnée mauvaise : 1, 2 ou 3     :disappointed:")
-        if result ==1:
-            st.write("--> Client satisfait, la note donnée sera bonne : 4 ou 5      :sunglasses:  ")
-
+    if result == 0:
+        st.write("--> Client mécontent : la note donnée mauvaise : 1, 2 ou 3     :disappointed:")
+    if result == 1:
+        st.write("--> Client satisfait, la note donnée sera bonne : 4 ou 5      :sunglasses:  ")
+    if result == 3:
+        pass
+ 
 
 #################################################################################    
 elif choose == "Importantes Features":
