@@ -577,7 +577,7 @@ elif choose == "Modélisation":
     
     
     if st.checkbox('Afficher tableau récap + commentaires sur ces 3 modèles :', key = 2):
-        image216 = Image.open("Image/Modelisation/image216.JPG")  # resum_class_avm
+        image216 = Image.open("Images/Modelisation//image216.JPG")  # resum_class_avm
         st.image(image216)
         st.info('Le seul modèle qui s’améliore avec les métadonnées est le Gradient Boosting. Le Log Reg reste très haut, mais avec un F1 Score et un score d’accuracy en très légère baisse.')
 
