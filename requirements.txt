@@ -7,3 +7,4 @@ seaborn
 streamlit_option_menu
 nltk
 joblib
+unidecode
