@@ -901,10 +901,15 @@ elif choose == "A vous de jouer !":
         mod = pipeDTM
     elif option == 'Gradient Boosting Regressor':
         mod = pipeGBCM
-        
-    #st.write(txt)
-    #st.write(toutpropre(txt)) 
-    st.write(pipeLRM)  
+    
+    
+    df_test = toutpropre(txt)
+    #st.write(txt) # il le fait
+    #st.write(toutpropre(txt)) # il le fait
+    # st.write(pipeLRM)  # il le fait
+    st.write(df_test)
+    
+    #st.write(pipeLRM.predict(toutpropre(txt))
     
     #pipeLRM = load("Modeles/pipeLRM.joblib") 
     
