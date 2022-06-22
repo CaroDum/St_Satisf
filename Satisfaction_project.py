@@ -906,7 +906,7 @@ elif choose == "A vous de jouer !":
     # st.write(pipeLRM)  # il le fait
     #st.write("df_test", df_test)    # il le fait
     #st.write(pipeLRM.predict(toutpropre(txt)))  # il plante ici
-    st.write(pipeLRM.feature_names_in_) 
+    #st.write(pipeLRM.feature_names_in_) 
     
     
     df_test2 = pd.Series(df_test)
