@@ -33,7 +33,6 @@ from  nltk.tokenize import word_tokenize
 import nltk
 nltk.download('punkt')
 from  nltk.tokenize import PunktSentenceTokenizer  
-#install unidecode
 from unidecode import unidecode
 import re
 from nltk.corpus import stopwords
