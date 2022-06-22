@@ -875,11 +875,10 @@ elif choose == "A vous de jouer !":
 
       # 3e partie : on va créer un DF avec ces métadonnées et le commentaire nettoyé :
  
-      df_x = pd.DataFrame(list(zip([long_com],[neg],[interr], [exclam], [points] , [mot_maj],[nb_maj],[x_OK] )), 
-                      columns = ['long_com', 'mots_neg', 'trouve_int', 'trouve_exc','nb_pt', 'mot_maj', 'nb_maj','com_OK'])
+      df_x = pd.DataFrame(list(zip([x_OK], [long_com],[neg],[interr], [exclam], [points] , [mot_maj],[nb_maj], )), 
+                      columns = ['com_OK', 'long_com','mots_neg', 'trouve_int', 'trouve_exc', 'nb_pt', 'mot_maj', 'nb_maj'])
       return df_x
   
-    
     
     
     # faire choisir le modèle pour prédiction
@@ -907,7 +906,7 @@ elif choose == "A vous de jouer !":
     # st.write(pipeLRM)  # il le fait
     #st.write("df_test", df_test)    # il le fait
     #st.write(pipeLRM.predict(toutpropre(txt)))  # il plante ici
-    #st.write(pipeLRM_feature_names_in_)  # ne fonctionne pas 
+    st.write(pipeLRM.feature_names_in_) 
     
     
     df_test2 = pd.Series(df_test)
@@ -916,7 +915,7 @@ elif choose == "A vous de jouer !":
     if txt == "Entrez ici votre commentaire":
         result = 3
     else:
-        result = mod.predict(df_test)[0]
+        result = pipeLRM.predict(df_test)[0]
        
     st.write("Prédictions pour :", option)
     if result == 0:
