@@ -1172,14 +1172,32 @@ elif choose == "Importantes Features":
     st.markdown('<h2 style="color: black;">Importantes Features</h2>', unsafe_allow_html=True)
     st.write('\n ')   
     st.write('\n ')   
-    st.write('Après des essais de visualisation sur le Bag of Word, nous voudrions voir quels sont les mots qui contribuent le plus à la construction du modèle. Nous prenons l’un des modèles qui a le plus performé : le Logistic Regression avec métadonnées.')
-    if st.checkbox('Afficher Top 40 Features pour le modèle Reg Log avec métadonnées'):
-        image260 = Image.open("Images/image260.JPG")
+    st.write('Après des essais de visualisation sur le Bag of Word, nous voudrions voir quels sont les mots qui contribuent le plus à la construction du modèle. Nous utilisons ici le **Logistic Regression avec métadonnées.**')
+    if st.checkbox('Afficher Top 40 des mots avec contribution Positive'):
+        image270= Image.open("\\Projet DS\Images\image270.png")
+        st.image(image270) 
+    st.write('\n')     
+    st.write('\n')    
+    if st.checkbox('Afficher Top 40 des mots avec contribution Négative'):
+        image271 = Image.open("\\Projet DS\Images/image271.png")
+        st.image(image271)  
+    st.write('\n')
+    st.write('\n')    
+    
+    
+    if st.checkbox('Afficher Top 40 des mots les plus contributeurs, en positif comme en négatif'):
+        image260 = Image.open("\\Projet DS\Images/image260.JPG")
         st.image(image260) 
         st.write('\n')
         st.info("Les mots les plus contributeurs en positif sont les mots **“satisfait”**, **“parfait”** et **“rapide”**.  \n  Les mots les plus contributeurs côté négatif sont **”mois”**, **“arnaque”**, et **“mauvaise”**.  \n  Le mot “mois” est étonnant... Mais quand on lit quelques commentaires, on s'aperçoit que certains clients ont attendu très longtemps leur colis")
         st.write('\n')
-
+    st.write('\n')    
+    st.write('\n')    
+ 
+        
+        
+        
+        
     if st.checkbox('Afficher Importantes Features pour le modèle Gradient Boosting avec métadonnées'):
         image261 = Image.open("Images/image261.JPG")
         image262 = Image.open("Images/image262.JPG")
