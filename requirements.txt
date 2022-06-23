@@ -1,7 +1,7 @@
 streamlit
-pandas==1.0.5
-numpy==1.18.1
-scikit_learn==0.22.1
+pandas
+numpy
+scikit_learn
 matplotlib
 seaborn
 streamlit_option_menu
