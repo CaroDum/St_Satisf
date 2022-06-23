@@ -1174,8 +1174,8 @@ elif choose == "Importantes Features":
     st.write('\n ')   
     st.write('Après des essais de visualisation sur le Bag of Word, nous voudrions voir quels sont les mots qui contribuent le plus à la construction du modèle. Nous utilisons ici le **Logistic Regression avec métadonnées.**')
     if st.checkbox('Afficher Top 40 des mots avec contribution Positive'):
-        image270= Image.open("Images\image270.png")
-        st.image(image270) 
+        image272= Image.open("Images\image270.png")
+        st.image(image272) 
     st.write('\n')     
     st.write('\n')    
     if st.checkbox('Afficher Top 40 des mots avec contribution Négative'):
