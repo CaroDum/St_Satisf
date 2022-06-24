@@ -572,7 +572,7 @@ elif choose == "Modélisation":
               if mod == 'Régression linéaire':
                   image230 = Image.open("Images/Modelisation/image230.JPG") #reg lin av m
                   image231 = Image.open("Images/Modelisation/image231.JPG") #cm reg lin av m
-                  image227 = Image.open("\Images/image227.jpg")
+                  image227 = Image.open("Images/image227.jpg")
                   title_container = st.container()
                   col1, col2 = st.columns([1, 10])
                   with title_container:
