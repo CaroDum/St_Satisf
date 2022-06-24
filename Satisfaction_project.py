@@ -655,22 +655,22 @@ elif choose == "Modélisation":
                       st.image(image211)
                       
                if mod == 'Decision Tree Classifier':
-                   image202 = Image.open("Images/Modelisation/image202.JPG") #DTC ss m
-                   image203 = Image.open("Images/Modelisation/image203.JPG") #cm DTC ss m
+                   image212 = Image.open("Images/Modelisation/image212.JPG") #DTC av m
+                   image213 = Image.open("Images/Modelisation/image213.JPG") #cm DTC av m
 
                    if st.checkbox('Afficher le rapport de classification :', key = 2):
-                       st.image(image202)
+                       st.image(image212)
                    if st.checkbox('Afficher la matrice de confusion :', key = 2):
-                       st.image(image203)
+                       st.image(image213)
 
                if mod == 'Gradient Boosting Classifier':
-                   image204 = Image.open("Images/Modelisation/image204.JPG") #GBC ss m
-                   image205 = Image.open("Images/Modelisation/image205.JPG") #cm GBC ss m
+                   image214 = Image.open("Images/Modelisation/image214.JPG") #GBC av m
+                   image215 = Image.open("Images/Modelisation/image215.JPG") #cm GBC av m
 
                    if st.checkbox('Afficher le rapport de classification :', key = 3):
-                       st.image(image204)
+                       st.image(image214)
                    if st.checkbox('Afficher la matrice de confusion :', key = 3):
-                       st.image(image205)
+                       st.image(image215)
       
         
       
