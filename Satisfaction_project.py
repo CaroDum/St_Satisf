@@ -394,7 +394,7 @@ elif choose == "Nuage de mots":
         st.write('\n ')
     if st.checkbox('Afficher le nuage de mots "clients mécontents" :'):
         st.image(image3, caption="Nuage de Mots 'Clients Mécontents'")
-        st.write("Il y a **273905** mots dans l'ensemble des commentaires clients 'mécontents") 
+        st.info("Il y a **273905** mots dans l'ensemble des commentaires clients 'mécontents") 
     st.write('\n ')
     st.write('\n ')     
     
@@ -529,7 +529,7 @@ elif choose == "Modélisation":
               if mod == 'Régression linéaire':
                   image220 = Image.open("Images/Modelisation/image220.JPG") #reg lin ss m
                   image221 = Image.open("Images/Modelisation/image221.JPG") #cm reg lin ss m
-                  image227 = Image.open("\Images/image227.jpg")  
+                  image227 = Image.open("Images/image227.jpg")  
      
                   title_container = st.container()
                   col1, col2 = st.columns([1, 10])
