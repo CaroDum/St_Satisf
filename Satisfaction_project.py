@@ -1111,7 +1111,7 @@ elif choose == "A vous de jouer !":
 
   # Chargement du modèle (à faire sur l'app Streamlit)
     pipeLR = load("Modeles/pipeLR.joblib") 
-    pipeDT = load("\Projet DS\Modeles/pipeDT.joblib") 
+    pipeDT = load("Modeles/pipeDT.joblib") 
     pipeGBC = load('Modeles/pipeGBC.joblib') 
 
     pipeLRM = load('Modeles/pipeLRM.joblib') 
