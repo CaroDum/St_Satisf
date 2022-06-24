@@ -151,7 +151,7 @@ elif choose == "Exploration Données":
     if st.checkbox('Afficher les infos du jeu de données de base :'):
             st.image(image6)
             st.write('Notre base de données est composée de peu de variables : 11 au total.')
-            image7 = Image.open('Images/descrip_variables_base.PNG')
+            image7 = Image.open('Images/descripvariables_base.PNG')
             st.image(image7)
             st.write("Nous remarquons avec les infos ci-dessus que nous avons énormément de valeurs manquantes pour les variables : reponse / ville /maj / date_commande / ecart.")
             st.write("Nous pouvons déjà supposer que toutes ne seront pas utiles pour l’analyse et la modélisation : en effet, notre objectif est de prédire la note à l’aide du commentaire : nous pouvons donc exclure la variable réponse par exemple qui a été ajoutée après l’obtention de la note (puisque réponse au commentaire")
@@ -280,7 +280,7 @@ elif choose == "Exploration Données":
     st.write('A qui apporte-t-on une réponse ?')
     st.write('\n ')  
     if st.checkbox("Afficher le graphe"):
-        image18 = Image.open("Images/star_et_answer.png")
+        image18 = Image.open("C:\Projet DS\Images/star_et_answer.png")
         st.image(image18)
         st.info("Les réponses ne sont pas apportées en fonction de la note. Ce qui est étonnant car il serait productif de répondre aux clients les plus insatisfaits.  \n  De plus en plus de clients déposent des avis sur une multitude de sites, et malgré toutes les technologies pour rassembler ces avis sur une seule et même plateforme permettant de répondre plus facilement au client, il est extrêmement long et coûteux pour les enseignes de répondre au commentaire, de façon personnalisée pour tous les clients.  \n  → il est judicieux dans ce cas de 'choisir ses combats' et de privilégier dans un 1e temps les clients mécontents pour éviter leur départ et leur non-rachat par la suite")
     st.write('\n ')  
@@ -303,9 +303,9 @@ elif choose == "Exploration MétaDonnées":
     st.markdown('<h6 style="color: black;">La métadonnée LONGUEUR DU COMMENTAIRE</h6>', unsafe_allow_html=True)
     st.write('\n ')  
     if st.checkbox("en général, par enseigne et selon les notes données", key=1):
-        image19 = Image.open("Images/long_com_describe.JPG")
-        image20 = Image.open("Images/long_com_par_ens.JPG")
-        image21 = Image.open("Images/long_com_par_star.JPG")
+        image19 = Image.open("C:\Projet DS\Images/long_com_describe.JPG")
+        image20 = Image.open("C:\Projet DS\Images/long_com_par_ens.JPG")
+        image21 = Image.open("C:\Projet DS\Images/long_com_par_star.JPG")
         
         title_container = st.container()
         col1, col2 = st.columns([1, 1.3])
@@ -331,9 +331,9 @@ elif choose == "Exploration MétaDonnées":
     st.write('\n ')  
 
     if st.checkbox("en général, par enseigne et selon les notes données", key=2):
-        image22 = Image.open("Images/mots_neg_describe.JPG")
-        image23 = Image.open("Images/mots_neg_par_ens.JPG")
-        image24 = Image.open("Images/mots_neg_par_star.JPG")
+        image22 = Image.open("C:\Projet DS\Images/mots_neg_describe.JPG")
+        image23 = Image.open("C:\Projet DS\Images/mots_neg_par_ens.JPG")
+        image24 = Image.open("C:\Projet DS\Images/mots_neg_par_star.JPG")
         
         title_container = st.container()
         col1, col2 = st.columns([1, 1.3])
@@ -354,10 +354,10 @@ elif choose == "Exploration MétaDonnées":
     st.write('\n ') 
     if st.checkbox("en général, par enseigne et selon les notes données", key=3):
         st.write('\n ') 
-        image25 = Image.open("Images/image25.JPG") #nb pts describe
-        image26 = Image.open("Images/image26.JPG") #tc nb_pt / star
-        ptsparstar = Image.open("Images/ptsparstar.JPG") #nb pts par star
-        ptsparens = Image.open("Images/ptspar_ens.JPG") # nb pts par enseigne
+        image25 = Image.open("C:\Projet DS\Images/image25.JPG") #nb pts describe
+        image26 = Image.open("C:\Projet DS\Images/image26.JPG") #tc nb_pt / star
+        ptsparstar = Image.open("C:\Projet DS\Images/ptsparstar.JPG") #nb pts par star
+        ptsparens = Image.open("C:\Projet DS\Images/ptspar_ens.JPG") # nb pts par enseigne
 
         st.image(image25)
         st.image(image26)
@@ -468,7 +468,7 @@ elif choose == "Méthodologie":
     st.write(' La modélisation consiste à appliquer des algorithmes de classification : un client appartient soit à une classe 1 (le client est satisfait) soit à une classe 0 (client non satisfait). ')
     st.write('\n')
     st.write('Le processus de la modélisation se décompose en quatre étapes :')
-    image100 = Image.open("Images/etapes_modelisa.JPG")
+    image100 = Image.open("C:\Projet DS\Images/etapes_modelisa.JPG")
     st.image(image100)
     st.write('\n')
 
@@ -478,7 +478,7 @@ elif choose == "Méthodologie":
     st.markdown('<h5 style="color: black;">Préparation des données</h5>', unsafe_allow_html=True)
     st.write('\n')
     st.write("___1. Nettoyage du fichier :___  \n  But : Enlever les variables inutiles / les valeurs manquantes, afin de ne pas alourdir le fichier et ainsi alléger le temps de traitement. Nous ne gardons que les variables utiles pour la modélisation : ")
-    image101 = Image.open("Images/image101.JPG")
+    image101 = Image.open("C:\Projet DS\Images/image101.JPG")
     st.image(image101)
     st.write('Et nous éliminons également les lignes où il n’y a pas de commentaires.')
     st.write('\n')
@@ -527,9 +527,9 @@ elif choose == "Modélisation":
              "Quel modèle voulez-vous tester ?",
              ('Régression linéaire', 'Decision Tree Regressor','Gradient Boosting Regressor'),index=1)
               if mod == 'Régression linéaire':
-                  image220 = Image.open("Images/Modelisation/image220.JPG") #reg lin ss m
-                  image221 = Image.open("Images/Modelisation/image221.JPG") #cm reg lin ss m
-                  image227 = Image.open("Images/image227.jpg")  
+                  image220 = Image.open("C:\Projet DS\Images/Modelisation/image220.JPG") #reg lin ss m
+                  image221 = Image.open("C:\Projet DS\Images/Modelisation/image221.JPG") #cm reg lin ss m
+                  image227 = Image.open("C:Images/image227.jpg")  
      
                   title_container = st.container()
                   col1, col2 = st.columns([1, 10])
@@ -547,8 +547,8 @@ elif choose == "Modélisation":
                       st.image(image221)
               st.write('\n ')
               if mod == 'Decision Tree Regressor':
-                  image222 = Image.open("Images/Modelisation/image222.JPG") #DTR ss m
-                  image223 = Image.open("Images/Modelisation/image223.JPG") #cm DTR ss m
+                  image222 = Image.open("C:\Projet DS\Images/Modelisation/image222.JPG") #DTR ss m
+                  image223 = Image.open("C:\Projet DS\Images/Modelisation/image223.JPG") #cm DTR ss m
 
                   if st.checkbox('Afficher le rapport de classification :', key = 8):
                       st.image(image222)
@@ -558,8 +558,8 @@ elif choose == "Modélisation":
                   st.write('\n ')    
 
               if mod == 'Gradient Boosting Regressor':
-                  image224 = Image.open("Images/Modelisation/image224.JPG") #GBR ss m
-                  image225 = Image.open("Images/Modelisation/image225.JPG") #cm GBR ss m
+                  image224 = Image.open("C:\Projet DS\Images/Modelisation/image224.JPG") #GBR ss m
+                  image225 = Image.open("C:\Projet DS\Images/Modelisation/image225.JPG") #cm GBR ss m
 
                   if st.checkbox('Afficher le rapport de classification :', key = 9):
                       st.image(image224)
@@ -570,9 +570,9 @@ elif choose == "Modélisation":
              "Quel modèle voulez-vous tester ?",
              ('Régression linéaire', 'Decision Tree Regressor','Gradient Boosting Regressor'),index=1)
               if mod == 'Régression linéaire':
-                  image230 = Image.open("Images/Modelisation/image230.JPG") #reg lin av m
-                  image231 = Image.open("Images/Modelisation/image231.JPG") #cm reg lin av m
-                  image227 = Image.open("Images/image227.jpg")
+                  image230 = Image.open("C:\Projet DS\Images/Modelisation/image230.JPG") #reg lin av m
+                  image231 = Image.open("C:\Projet DS\Images/Modelisation/image231.JPG") #cm reg lin av m
+                  image227 = Image.open("C:Images/image227.jpg")
                   title_container = st.container()
                   col1, col2 = st.columns([1, 10])
                   with title_container:
@@ -589,8 +589,8 @@ elif choose == "Modélisation":
                       st.image(image231)
 
               if mod == 'Gradient Boosting Regressor':
-                  image234 = Image.open("Images/Modelisation/image234.JPG") #GBR av m
-                  image235 = Image.open("Images/Modelisation/image235.JPG") #cm GBR av m
+                  image234 = Image.open("C:\Projet DS\Images/Modelisation/image234.JPG") #GBR av m
+                  image235 = Image.open("C:\Projet DS\Images/Modelisation/image235.JPG") #cm GBR av m
 
                   if st.checkbox('Afficher le rapport de classification :', key = 12):
                       st.image(image234)
@@ -598,8 +598,8 @@ elif choose == "Modélisation":
                       st.image(image235)
                       
               if mod == 'Decision Tree Regressor':
-                  image232 = Image.open("Images/Modelisation/image232.JPG") #DTR av m
-                  image233 = Image.open("Images/Modelisation/image233.JPG") #cm DTR av m
+                  image232 = Image.open("C:\Projet DS\Images/Modelisation/image232.JPG") #DTR av m
+                  image233 = Image.open("C:\Projet DS\Images/Modelisation/image233.JPG") #cm DTR av m
 
                   if st.checkbox('Afficher le rapport de classification :', key = 11):
                       st.image(image232)
@@ -615,8 +615,8 @@ elif choose == "Modélisation":
               "Quel modèle voulez-vous tester ?",
               ('Régression Logistique', 'Decision Tree Classifier','Gradient Boosting Classifier'),index=1)
                if mod == 'Régression Logistique':
-                   image200 = Image.open("Images/Modelisation/image200.JPG") #reg log ss m
-                   image201 = Image.open("Images/Modelisation/image201.JPG") #cm reg log ss m
+                   image200 = Image.open("C:\Projet DS\Images/Modelisation/image200.JPG") #reg log ss m
+                   image201 = Image.open("C:\Projet DS\Images/Modelisation/image201.JPG") #cm reg log ss m
 
                    if st.checkbox('Afficher le rapport de classification :', key = 1):
                        st.image(image200)
@@ -624,8 +624,8 @@ elif choose == "Modélisation":
                        st.image(image201)
   
                if mod == 'Decision Tree Classifier':
-                   image202 = Image.open("Images/Modelisation/image202.JPG") #DTC ss m
-                   image203 = Image.open("Images/Modelisation/image203.JPG") #cm DTC ss m
+                   image202 = Image.open("C:\Projet DS\Images/Modelisation/image202.JPG") #DTC ss m
+                   image203 = Image.open("C:\Projet DS\Images/Modelisation/image203.JPG") #cm DTC ss m
 
                    if st.checkbox('Afficher le rapport de classification :', key = 2):
                        st.image(image202)
@@ -633,8 +633,8 @@ elif choose == "Modélisation":
                        st.image(image203)
  
                if mod == 'Gradient Boosting Classifier':
-                   image204 = Image.open("Images/Modelisation/image204.JPG") #GBC ss m
-                   image205 = Image.open("Images/Modelisation/image205.JPG") #cm GBC ss m
+                   image204 = Image.open("C:\Projet DS\Images/Modelisation/image204.JPG") #GBC ss m
+                   image205 = Image.open("C:\Projet DS\Images/Modelisation/image205.JPG") #cm GBC ss m
 
                    if st.checkbox('Afficher le rapport de classification :', key = 3):
                        st.image(image204)
@@ -646,8 +646,8 @@ elif choose == "Modélisation":
               "Quel modèle voulez-vous tester ?",
               ('Régression Logistique', 'Decision Tree Classifier','Gradient Boosting Classifier'),index=1)
                if mod == 'Régression Logistique':
-                  image210 = Image.open("Images/Modelisation/image210.JPG") #reg log av m
-                  image211 = Image.open("Images/Modelisation/image211.JPG") #cm reg log av m
+                  image210 = Image.open("C:\Projet DS\Images/Modelisation/image210.JPG") #reg log av m
+                  image211 = Image.open("C:\Projet DS\Images/Modelisation/image211.JPG") #cm reg log av m
 
                   if st.checkbox('Afficher le rapport de classification :', key = 4):
                       st.image(image210)
@@ -655,8 +655,8 @@ elif choose == "Modélisation":
                       st.image(image211)
                       
                if mod == 'Decision Tree Classifier':
-                   image202 = Image.open("Images/Modelisation/image202.JPG") #DTC ss m
-                   image203 = Image.open("Images/Modelisation/image203.JPG") #cm DTC ss m
+                   image202 = Image.open("C:\Projet DS\Images/Modelisation/image202.JPG") #DTC ss m
+                   image203 = Image.open("C:\Projet DS\Images/Modelisation/image203.JPG") #cm DTC ss m
 
                    if st.checkbox('Afficher le rapport de classification :', key = 2):
                        st.image(image202)
@@ -665,7 +665,7 @@ elif choose == "Modélisation":
 
                if mod == 'Gradient Boosting Classifier':
                    image204 = Image.open("Images/Modelisation/image204.JPG") #GBC ss m
-                   image205 = Image.open("Images/Modelisation/image205.JPG") #cm GBC ss m
+                   image205 = Image.open("C:\Projet DS\Images/Modelisation/image205.JPG") #cm GBC ss m
 
                    if st.checkbox('Afficher le rapport de classification :', key = 3):
                        st.image(image204)
@@ -730,8 +730,8 @@ elif choose == "Modélisation2":
     st.write('\n')
     
     st.write("___1. Logistic Regression sans métadonnées___ ")
-    image200 = Image.open("Images/Modelisation/image200.JPG") #reg log ss m
-    image201 = Image.open("Images/Modelisation/image201.JPG") #cm reg log ss m
+    image200 = Image.open("C:\Projet DS\Images/Modelisation/image200.JPG") #reg log ss m
+    image201 = Image.open("C:\Projet DS\Images/Modelisation/image201.JPG") #cm reg log ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 1):
         st.image(image200)
@@ -742,8 +742,8 @@ elif choose == "Modélisation2":
 
 
     st.write("___2. Decision Tree Classifier sans métadonnées___ ")
-    image202 = Image.open("Images/Modelisation/image202.JPG") #DTC ss m
-    image203 = Image.open("Images/Modelisation/image203.JPG") #cm DTC ss m
+    image202 = Image.open("C:\Projet DS\Images/Modelisation/image202.JPG") #DTC ss m
+    image203 = Image.open("C:\Projet DS\Images/Modelisation/image203.JPG") #cm DTC ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 2):
         st.image(image202)
@@ -754,8 +754,8 @@ elif choose == "Modélisation2":
    
     
     st.write("___3. Gradient Boosting Classifier sans métadonnées___ ")
-    image204 = Image.open("Images/Modelisation/image204.JPG") #GBC ss m
-    image205 = Image.open("Images/Modelisation/image205.JPG") #cm GBC ss m
+    image204 = Image.open("C:\Projet DS\Images/Modelisation/image204.JPG") #GBC ss m
+    image205 = Image.open("C:\Projet DS\Images/Modelisation/image205.JPG") #cm GBC ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 3):
         st.image(image204)
@@ -779,8 +779,8 @@ elif choose == "Modélisation2":
     st.write('\n')
     
     st.write("___1. Logistic Regression avec métadonnées___ ")
-    image210 = Image.open("Images/Modelisation/image210.JPG") #reg log av m
-    image211 = Image.open("Images/Modelisation/image211.JPG") #cm reg log av m
+    image210 = Image.open("C:\Projet DS\Images/Modelisation/image210.JPG") #reg log av m
+    image211 = Image.open("C:\Projet DS\Images/Modelisation/image211.JPG") #cm reg log av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 4):
         st.image(image210)
@@ -791,8 +791,8 @@ elif choose == "Modélisation2":
 
 
     st.write("___2. Decision Tree Classifier avec métadonnées___ ")
-    image212 = Image.open("Images/Modelisation/image212.JPG") #DTC av m
-    image213 = Image.open("Images/Modelisation/image213.JPG") #cm DTC av m
+    image212 = Image.open("C:\Projet DS\Images/Modelisation/image212.JPG") #DTC av m
+    image213 = Image.open("C:\Projet DS\Images/Modelisation/image213.JPG") #cm DTC av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 5):
         st.image(image212)
@@ -803,8 +803,8 @@ elif choose == "Modélisation2":
    
     
     st.write("___3. Gradient Boosting Classifier sans métadonnées___ ")
-    image214 = Image.open("Images/Modelisation/image214.JPG") #GBC av m
-    image215 = Image.open("Images/Modelisation/image215.JPG") #cm GBC av m
+    image214 = Image.open("C:\Projet DS\Images/Modelisation/image214.JPG") #GBC av m
+    image215 = Image.open("C:\Projet DS\Images/Modelisation/image215.JPG") #cm GBC av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 6):
         st.image(image214)
@@ -828,9 +828,9 @@ elif choose == "Modélisation2":
     st.write('\n')
     
     st.write("___1. Linear Regression sans métadonnées___ ")
-    image220 = Image.open("Images/Modelisation/image220.JPG") #reg lin ss m
-    image221 = Image.open("Images/Modelisation/image221.JPG") #cm reg lin ss m
-    image227 = Image.open("Images/image227.jpg")
+    image220 = Image.open("C:\Projet DS\Images/Modelisation/image220.JPG") #reg lin ss m
+    image221 = Image.open("C:\Projet DS\Images/Modelisation/image221.JPG") #cm reg lin ss m
+    image227 = Image.open("C:\Projet DS\Images/image227.jpg")
     
     
     title_container = st.container()
@@ -854,8 +854,8 @@ elif choose == "Modélisation2":
 
 
     st.write("___2. Decision Tree Classifier sans métadonnées___ ")
-    image222 = Image.open("Images/Modelisation/image222.JPG") #DTR ss m
-    image223 = Image.open("Images/Modelisation/image223.JPG") #cm DTR ss m
+    image222 = Image.open("C:\Projet DS\Images/Modelisation/image222.JPG") #DTR ss m
+    image223 = Image.open("C:\Projet DS\Images/Modelisation/image223.JPG") #cm DTR ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 8):
         st.image(image222)
@@ -866,8 +866,8 @@ elif choose == "Modélisation2":
    
     
     st.write("___3. Gradient Boosting Regressor sans métadonnées___ ")
-    image224 = Image.open("Images/Modelisation/image224.JPG") #GBR ss m
-    image225 = Image.open("Images/Modelisation/image225.JPG") #cm GBR ss m
+    image224 = Image.open("C:\Projet DS\Images/Modelisation/image224.JPG") #GBR ss m
+    image225 = Image.open("C:\Projet DS\Images/Modelisation/image225.JPG") #cm GBR ss m
 
     if st.checkbox('Afficher le rapport de classification :', key = 9):
         st.image(image224)
@@ -894,8 +894,8 @@ elif choose == "Modélisation2":
 
     st.write("___1. Linear Regression avec métadonnées___ ")
     
-    image230 = Image.open("Images/Modelisation/image230.JPG") #reg lin av m
-    image231 = Image.open("Images/Modelisation/image231.JPG") #cm reg lin av m
+    image230 = Image.open("C:\Projet DS\Images/Modelisation/image230.JPG") #reg lin av m
+    image231 = Image.open("C:\Projet DS\Images/Modelisation/image231.JPG") #cm reg lin av m
 
     title_container = st.container()
     col1, col2 = st.columns([1, 10])
@@ -916,8 +916,8 @@ elif choose == "Modélisation2":
 
 
     st.write("___2. Decision Tree Regressor avec métadonnées___ ")
-    image232 = Image.open("Images/Modelisation/image232.JPG") #DTR av m
-    image233 = Image.open("Images/Modelisation/image233.JPG") #cm DTR av m
+    image232 = Image.open("C:\Projet DS\Images/Modelisation/image232.JPG") #DTR av m
+    image233 = Image.open("C:\Projet DS\Images/Modelisation/image233.JPG") #cm DTR av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 11):
         st.image(image232)
@@ -928,8 +928,8 @@ elif choose == "Modélisation2":
    
     
     st.write("___3. Gradient Boosting Regressor avec métadonnées___ ")
-    image234 = Image.open("Images/Modelisation/image234.JPG") #GBR av m
-    image235 = Image.open("Images/Modelisation/image235.JPG") #cm GBR av m
+    image234 = Image.open("C:\Projet DS\Images/Modelisation/image234.JPG") #GBR av m
+    image235 = Image.open("C:\Projet DS\Images/Modelisation/image235.JPG") #cm GBR av m
 
     if st.checkbox('Afficher le rapport de classification :', key = 12):
         st.image(image234)
@@ -962,22 +962,7 @@ elif choose == "A vous de jouer !":
     st.markdown('<h2 style="color: black;">A vous de tester le modèle </h2>', unsafe_allow_html=True)
 
 
-# Chargement du modèle (à faire sur l'app Streamlit)
-    pipeLR = load("Modeles/pipeLR.joblib") 
-    pipeDT = load('Modeles/pipeDT.joblib') 
-    pipeGBC = load('Modeles/pipeGBC.joblib') 
 
-    pipeLRM = load('Modeles/pipeLRM.joblib') 
-    pipeDTM = load('Modeles/pipeDTM.joblib') 
-    pipeGBCM = load('Modeles/pipeGBCM.joblib') 
-
-    pipeRL = load('Modeles/pipeRL.joblib') 
-    pipeDTR = load('Modeles/pipeDTR.joblib') 
-    pipeGBR = load('Modeles/pipeGBR.joblib') 
-
-    pipeRLm = load('Modeles/pipeRLm.joblib') 
-    pipeDTRm = load('Modeles/pipeDTRm.joblib') 
-    pipeGBRm = load('Modeles/pipeGBRm.joblib') 
 
 
     # mettre une zone de texte pour entrer un commentaire
@@ -1124,45 +1109,116 @@ elif choose == "A vous de jouer !":
       return df_x
   
 
-    
+  # Chargement du modèle (à faire sur l'app Streamlit)
+    pipeLR = load("Modeles/pipeLR.joblib") 
+    pipeDT = load("\Projet DS\Modeles/pipeDT.joblib") 
+    pipeGBC = load('C:\Projet DS\Modeles/pipeGBC.joblib') 
+
+    pipeLRM = load('C:\Projet DS\Modeles/pipeLRM.joblib') 
+    pipeDTM = load('C:\Projet DS\Modeles/pipeDTM.joblib') 
+    pipeGBCM = load('C:\Projet DS\Modeles/pipeGBCM.joblib') 
+
+    pipeRL = load('C:\Projet DS\Modeles/pipeRL.joblib') 
+    pipeDTR = load('C:\Projet DS\Modeles/pipeDTR.joblib') 
+    pipeGBR = load('C:\Projet DS\Modeles/pipeGBR.joblib') 
+
+    pipeRLm = load('C:\Projet DS\Modeles/pipeRLm.joblib') 
+    pipeDTRm = load('C:\Projet DS\Modeles/pipeDTRm.joblib') 
+    pipeGBRm = load('C:\Projet DS\Modeles/pipeGBRm.joblib') 
+       
    
     # faire choisir le modèle pour prédiction
     option = st.selectbox(
      'Quel modèle voulez-vous tester ?',
      ('Régression Logisitique', 
       'Decision Tree Classifier', 
-      'Gradient Boosting Classifier'))
-    st.write('\n')
-
-    st.write('Vous avez choisi :', option)
+      'Gradient Boosting Classifier',
+      'Régression Linéaire',
+      'Decision Tree Regressor',
+      'Gradient Boosting Regressor'))
     st.write('\n')
     
-    if option == 'Régression Logisitique':
+
+    radio = st.radio("Avec ou sans métadonnées ?", ('Avec Métadonnées', 'Sans Métadonnées'))
+    
+
+
+    st.write('Vous avez choisi :', option, radio)
+    st.write('\n')
+    
+    if option == 'Régression Logisitique' and radio == 'Sans Métadonnées':
+        mod = pipeLR
+    if option == 'Decision Tree Classifier' and radio == 'Sans Métadonnées':
+        mod = pipeDT
+    if option == 'Gradient Boosting Classifier' and radio == 'Sans Métadonnées':
+        mod = pipeGBC
+
+    if option == 'Régression Logisitique' and radio == 'Avec Métadonnées':
         mod = pipeLRM
-    elif option == 'Decision Tree Classifier':
+    if option == 'Decision Tree Classifier' and radio == 'Avec Métadonnées':
         mod = pipeDTM
-    elif option == 'Gradient Boosting Classifier':
+    if option == 'Gradient Boosting Classifier' and radio == 'Avec Métadonnées':
         mod = pipeGBCM
         
+        
+    if option == 'Régression Linéaire' and radio == 'Sans Métadonnées':
+        mod = pipeRL
+    if option == 'Decision Tree Regressor' and radio == 'Sans Métadonnées':
+        mod = pipeDTR
+    if option == 'Gradient Boosting Regressor' and radio == 'Sans Métadonnées':
+        mod = pipeGBR
+
+    if option == 'Régression Linéaire' and radio == 'Avec Métadonnées':
+        mod = pipeRLm
+    if option == 'Decision Tree Regressor' and radio == 'Avec Métadonnées':
+        mod = pipeDTRm
+    if option == 'Gradient Boosting Regressor' and radio == 'Avec Métadonnées':
+        mod = pipeGBRm
+        
+        
+        
          
-    # donner la prédiction 
-    if txt == "Entrez ici votre commentaire":
-        result = 3
-    else:
-        result = mod.predict(toutpropre(txt))[0]
-
-
+    # donner la prédiction pour la CLASSIFICATION
+    if option == 'Régression Logisitique' or option == 'Decision Tree Classifier' or option == 'Gradient Boosting Classifier':
+        if txt == "Entrez ici votre commentaire":
+            resultc = "non"
+        else:
+            resultc = mod.predict(toutpropre(txt))[0]
 
     
-    
-    if result == 0:
-        st.error("--> Client **mécontent** : la note donnée mauvaise : **1, 2 ou 3**     :disappointed:")
-    if result == 1:
-        st.success("  -->    Client **satisfait**, la note donnée sera élevée : **4 ou 5**      :sunglasses:  ")
-    if result == 3:
-        pass
+        if resultc == 0:
+            st.error("--> Client **mécontent** : la note prédite mauvaise : **1, 2 ou 3**     :disappointed:")
+        if resultc == 1:
+            st.success("  -->    Client **satisfait**, la note prédite sera élevée : **4 ou 5**      :sunglasses:  ")
+        if resultc == "non":
+                pass
         
         
+    # donner la prédiction pour la REGRESSION
+    if option == 'Régression Linéaire' or option == 'Decision Tree Regressor' or option == 'Gradient Boosting Regressor':
+        if txt == "Entrez ici votre commentaire":
+            resultr = "non"
+        else:
+            resultr = mod.predict(toutpropre(txt))[0]
+
+        resultr = np.round(resultr,0)
+        if resultr <= 0:
+            resultr = 1
+            if resultr > 5:
+                resultr =5
+        
+        if resultr == 1:
+            st.error("   -->     Client **très mécontent** : la note prédite est **1**     😖")
+        if resultr == 2:
+            st.error("   -->     Client **mécontent** : la note prédite est **2**     :🙁")
+        if resultr == 3:
+            st.info("   -->     Client **mitigé** : la note prédite est **3**      😑")
+        if resultr == 4:
+            st.success("   -->     Client **satisfait** : la note prédite est **4**      🙂")
+        if resultr == 5:
+             st.success("  -->    Client **très satisfait**, la note prédite est **5**      🥰 ")
+        if resultr == "non":
+             pass
         
         
 #################################################################################    
@@ -1174,10 +1230,8 @@ elif choose == "Importantes Features":
     st.write('\n ')   
     st.write('Après des essais de visualisation sur le Bag of Word, nous voudrions voir quels sont les mots qui contribuent le plus à la construction du modèle. Nous utilisons ici le **Logistic Regression avec métadonnées.**')
     if st.checkbox('Afficher Top 40 des mots avec contribution Positive'):
-        image272= Image.open("Images/image272.png")
-        image270= Image.open("Images/image270.png")
-
-        st.image(image272) 
+        image270= Image.open("Images\image270.png")
+        st.image(image270) 
     st.write('\n')     
     st.write('\n')    
     if st.checkbox('Afficher Top 40 des mots avec contribution Négative'):
@@ -1195,11 +1249,6 @@ elif choose == "Importantes Features":
         st.write('\n')
     st.write('\n')    
     st.write('\n')    
- 
-        
-        
-        
-        
     if st.checkbox('Afficher Importantes Features pour le modèle Gradient Boosting avec métadonnées'):
         image261 = Image.open("Images/image261.JPG")
         image262 = Image.open("Images/image262.JPG")
@@ -1213,6 +1262,8 @@ elif choose == "Importantes Features":
                 st.image(image262, width = 440)
         st.write('\n')
         st.info('La métadonnée "mot _neg" est la plus contributrice.La contribution est quasi-nulle pour les autres métadonnées.')
+
+
 
 #################################################################################    
 elif choose == "Conclusion":
