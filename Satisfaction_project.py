@@ -1297,7 +1297,7 @@ elif choose == "Conclusion":
 
     if st.checkbox('Pour aller plus loin :'):
         st.write('Nous avons réussi à prédire la note donnée à partir du commentaire du client.  \n  Et maintenant ?')
-        st.write('1. En application directe, nous pourrions aller tester notre modèle sur d’autres sites, pour d’autres enseignes   \n  → En extrayant les commentaires de site qui ne sont pas forcément des des sites de “notes” (ex TrustPilot), nous pourrions savoir à partir du commentaire du client la façon dont il nous note et pouvoir établir une vision globale de l’enseigne à travers l’ensemble des canaux d’expression des clients : FaceBook / Insta / Avis Vérifiés / Messenger / Pages Jaunes …')
+        st.write('1. En application directe, nous pourrions aller tester notre modèle sur d’autres sites, pour d’autres enseignes   \n  → En extrayant les commentaires de site qui ne sont pas forcément des sites de “notes” (ex TrustPilot), nous pourrions savoir à partir du commentaire du client la façon dont il nous note et pouvoir établir une vision globale de l’enseigne à travers l’ensemble des canaux d’expression des clients : FaceBook / Insta / Avis Vérifiés / Messenger / Pages Jaunes …')
         st.write('En fonction de cette note prédite, nous pouvons établir un plan de réponses aux clients les plus mécontents   \n  → il est **indispensable** de répondre aux clients et en priorité à ceux les plus mécontents, sous peine qu’ils partent à la concurrence, et encore pire, qu’ils parlent de leur mauvaise expérience à son entourage.')
         st.write('\n ')
         st.write("**Un client satisfait en parle à 3 autres. Un mécontent, à 11**")
