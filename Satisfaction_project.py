@@ -42,8 +42,8 @@ nltk.download('stopwords')
 
 
 with st.sidebar:
-    choose = option_menu("Menu", ["Le sujet", "Problématique", "Exploration Données", "Exploration MétaDonnées","Nuage de mots", "Bag of Words", "Méthodologie", "Modélisation", "Importantes Features", "Conclusion", "A vous de jouer !","Contact"],
-                         icons=['journal', 'wrench adjustable circle', 'clipboard-data','clipboard-plus fill','cloud-check','handbag', 'info-circle','building','reception-4','robot','pencil-square','at'],
+    choose = option_menu("Menu", ["Le sujet", "Problématique", "Exploration Données", "Exploration MétaDonnées","Nuage de mots", "Bag of Words", "Méthodologie", "Modélisation",  "Conclusion", "Importantes Features", "A vous de jouer !","Contact"],
+                         icons=['journal', 'wrench adjustable circle', 'clipboard-data','clipboard-plus fill','cloud-check','handbag', 'info-circle','building','robot', 'reception-4', 'pencil-square','at'],
                          menu_icon="list", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#fadcbd"},
@@ -272,7 +272,7 @@ elif choose == "Exploration Données":
     if st.checkbox("Afficher l'analyse sur la réponse apportée:"):
         image17 = Image.open("Images/image17.png")
         st.image(image17)
-        st.success("**Variable très intéressante, car elle permet de voir si un client mécontent reçoit une réponse de la part de son enseigne. Autrement dit, est-ce que le client reçoit une réponse ? quel est le client a qui on répond (mécontent?) ?**")
+        st.success("**Variable très intéressante, car elle permet de voir si un client mécontent reçoit une réponse de la part de son enseigne. Autrement dit, quel est le client a qui on répond (mécontent?) ? et comment ? **")
         st.info("Instructif car nous avons vu précédemment que VeePee avait une majorité de note à 1 --> en tant qu’enseigne, il serait intéressant de répondre à au client et de pouvoir constater ainsi :  \n  d’une part son mécontentement et tenter de le résoudre, d’autre part de voir si un problème récurrent n'apparaît pas dans les commentaires. \n  Or, dans notre fichier, nous constatons que VeePee ne répond jamais aux clients. ShowRoomPrivé le fait dans près d'un cas sur 2. ")  
         st.error("**Remarque** : cette variable ne doit pas être prise en compte pour expliquer la note car elle intervient forcément après le dépôt de la note et du commentaire sur le site.  \n  Elle peut en tout cas expliquer une non fidélisation des clients. ")
     
@@ -480,7 +480,7 @@ elif choose == "Méthodologie":
     st.write("___1. Nettoyage du fichier :___  \n  But : Enlever les variables inutiles / les valeurs manquantes, afin de ne pas alourdir le fichier et ainsi alléger le temps de traitement. Nous ne gardons que les variables utiles pour la modélisation : ")
     image101 = Image.open("Images/image101.JPG")
     st.image(image101)
-    st.write('Et nous éliminons également les lignes où il n’y a pas de commentaires.')
+    st.write('Nous éliminons également les lignes où il n’y a pas de commentaires.  \n  Les commentaires ont également été nettoyés : passage par un StopWord, que j’ai updaté pour intégrer toutes les ponctuations, accents, majuscule …')
     st.write('\n')
     st.write('\n')
 
@@ -683,22 +683,6 @@ elif choose == "Modélisation":
       
       with col1:
           st.write("____")
-          st.write("___Classification___ ")
-
-          if st.checkbox('Afficher tableau récap + commentaires sur les 3 modèles de classification sans métadonnées :', key = 1):
-              image206 = Image.open("Images/Modelisation/image206.JPG")  # resum_class_ssm
-              st.image(image206)
-              st.info('Nous avons déjà de très bons résultats à partir de ces 3 modèles qui en plus n’utilisent pas les métadonnées créées.  \n  Le meilleur est le Reg Log, suivi par le Gradient Boosting.  \n  Le modèle Decision Tree est le moins performant.')
-              st.write('\n ')  
-            
-          if st.checkbox('Afficher tableau récap + commentaires sur les 3 modèles de classification avec métadonnées :', key = 2):
-              image216 = Image.open("Images/Modelisation/image216.JPG")  # resum_class_avm
-              st.image(image216)
-              st.info('Le seul modèle qui s’améliore avec les métadonnées est le Gradient Boosting. Le Log Reg reste très haut, mais avec un F1 Score et un score d’accuracy en très légère baisse.')
-              st.write('\n ')  
-    
-      with col2:
-          st.write("____")
           st.write("___Prédiction de score : régression___")
 
       
@@ -716,6 +700,23 @@ elif choose == "Modélisation":
               st.write('\n ')  
               st.write('\n ')  
           
+
+      with col2:
+          st.write("____")
+          st.write("___Classification___ ")
+
+          if st.checkbox('Afficher tableau récap + commentaires sur les 3 modèles de classification sans métadonnées :', key = 1):
+              image206 = Image.open("Images/Modelisation/image206.JPG")  # resum_class_ssm
+              st.image(image206)
+              st.info('Nous avons déjà de très bons résultats à partir de ces 3 modèles qui en plus n’utilisent pas les métadonnées créées.  \n  Le meilleur est le Reg Log, suivi par le Gradient Boosting.  \n  Le modèle Decision Tree est le moins performant.')
+              st.write('\n ')  
+            
+          if st.checkbox('Afficher tableau récap + commentaires sur les 3 modèles de classification avec métadonnées :', key = 2):
+              image216 = Image.open("Images/Modelisation/image216.JPG")  # resum_class_avm
+              st.image(image216)
+              st.info('Le seul modèle qui s’améliore avec les métadonnées est le Gradient Boosting. Le Log Reg reste très haut, mais avec un F1 Score et un score d’accuracy en très légère baisse.')
+              st.write('\n ')  
+    
 
    
 ########################################################################
@@ -1201,11 +1202,11 @@ elif choose == "A vous de jouer !":
         else:
             resultr = mod.predict(toutpropre(txt))[0]
 
-        resultr = np.round(resultr,0)
-        if resultr <= 0:
-            resultr = 1
-            if resultr > 5:
-                resultr =5
+            resultr = np.round(resultr,0)
+            if resultr <= 0:
+                resultr = 1
+                if resultr > 5:
+                    resultr =5
         
         if resultr == 1:
             st.error("   -->     Client **très mécontent** : la note prédite est **1**     😖")
